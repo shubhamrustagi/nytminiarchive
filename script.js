@@ -18,7 +18,7 @@ function extractDate() {
         const year = date.getFullYear();
         const linkWithDate = `https://www.nytimes.com/crosswords/game/mini/${dateParts[0]}/${dateParts[1]}/${dateParts[2]}`
         
-        document.getElementById('linker').innerHTML = `<a href="${linkWithDate}">${day +" "+ month + " " + year}</a>`
+        document.getElementById('linker').innerHTML = `<a target="_blank" href="${linkWithDate}">${day +" "+ month + " " + year}</a>`
     } else {
         document.getElementById('linker').innerHTML = "Please select a date."
     }
