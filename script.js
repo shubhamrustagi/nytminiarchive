@@ -3,6 +3,7 @@ function extractDate() {
     const minDate = new Date('2014-08-21');
     const maxDate = new Date();
     const date = new Date(inputDate);
+    console.log(date);
     if (date < minDate) {
         document.getElementById('linker').innerHTML ="The date cannot be before 21 August 2014.";
         return;
@@ -21,4 +22,21 @@ function extractDate() {
     } else {
         document.getElementById('linker').innerHTML = "Please select a date."
     }
+}
+
+
+function nextClick() {
+    const inputDate = document.getElementById('dateInput').value;
+    const date = new Date(inputDate);
+    date.setDate(date.getDate() + 1);
+    document.getElementById('dateInput').value = date.toISOString().split('T')[0];
+    extractDate();
+}
+
+function prevClick() {
+    const inputDate = document.getElementById('dateInput').value;
+    const date = new Date(inputDate);
+    date.setDate(date.getDate() - 1);
+    document.getElementById('dateInput').value = date.toISOString().split('T')[0];
+    extractDate();
 }

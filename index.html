@@ -10,25 +10,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<!-- <body>
-    <input type="date" id="dateInput">
-    <button onclick="extractDate()">Extract Date</button>
-    <div id = "container">
-        <div class ="item">Prev</div>
-        <div class ="item" id="linker">Link will generate here</div>
-        <div class ="item">Next</div>
-    </div>
-    <script src="script.js"></script>
-</body> -->
+
 <body>
+
+    
     <div id = "main">
         <h1>NYT Mini Archive</h1>
         <input type="date" id="dateInput">
-        <button onclick="extractDate()">Extract Date</button>
+        <div id="button-div" onclick="extractDate()">Extract Date</div>
         <div id = "inner">
-            <div class ="item bracks"><</div>
+            <div class="item bracks" id="left" onclick="prevClick()">&lt;</div>
             <div class ="item" id="linker">Link will generate here</div>
-            <div class ="item bracks">></div>
+            <div class="item bracks" id="right" onclick="nextClick()">&gt;</div>
         </div>
     </div>
     <script src="script.js"></script>
