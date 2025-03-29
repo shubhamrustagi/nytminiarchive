@@ -113,6 +113,65 @@ h1{
     background-color: rgb(41, 208, 245);
 }
 
+@media (max-width: 600px) {
+    h1 {
+        font-size: 300%;
+        top: -5%;
+        width: 80%;
+    }
+
+    #main {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: beige;
+        border: solid 1px black;
+        width: 100vw;
+        height: 100vh;
+        
+        text-align: center;
+    }
+
+    #dateInput {
+        width: 80%;
+        height: 3%;
+        font-size: 100%;
+    }
+
+    #button-div {
+        width: 80%;
+        font-size: 100%;
+        padding: 2% 4%;
+    }
+
+    #inner {
+        flex-direction: row;
+        width: 100%;
+        height: auto;
+    }
+
+    #linker {
+        width: 35%;
+    }
+
+        .item {
+        width: 20%;
+        height: 70%;
+        margin: 0 10px;
+        }
+
+        .bracks {
+        font-size: 40px;
+        margin: 0;
+        }
+    }
+
+    #inner, .bracks {
+        display: flex;
+        align-items: center;
+    }
+}
+
 
 
                 
