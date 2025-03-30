@@ -6,6 +6,7 @@ html, body {
     overflow: hidden;
     font-family: "Montserrat", sans-serif;
     font-size: 14px;
+    user-select: none;
 }
 h1{
     font-size: 500%;
@@ -44,22 +45,22 @@ h1{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height:3%;
+    height:5%;
     margin-top:1%;
     margin-bottom: 1%;
-    padding: 10px 20px;
-    font-size: 16px;
     background-color: #70dd74;
-    color: rgb(25, 29, 13);
+    color: #0d7a13;
+    font-weight: bold;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
-    width: 14%;
+    font-size: 120%;
+    width:16.5%;
 }
 
 #button-div:hover {
-    background-color: #45a049;
+    background-color: #58b85f;
 }
 
 #inner {
@@ -77,15 +78,20 @@ h1{
     width: 2.2%;
     cursor: pointer;
     transition: background-color 0.3s;
+    font-size: 100%;
+    font-weight: bold;
+    color: rgb(167, 7, 100);
 }
 #linker:hover{
     background-color: rgb(243, 31, 243);
 }
 #linker>a {
     text-decoration: none;
-    color: rgb(0, 0, 0);
-    font-size: 20px;
+    font-size: 100%;
     font-weight: bold;
+    color: rgb(167, 7, 100);
+    
+    
 }
 
 .item {
@@ -108,11 +114,18 @@ h1{
     transition: background-color 0.3s;
     font-size: 40px;
     font-weight: bold;
+    color:rgb(79, 146, 218)
 }
 .bracks:hover {
-    background-color: rgb(41, 208, 245);
+    background-color: rgb(116, 182, 197);
 }
-
+h5{
+    visibility: hidden;
+    font-weight: normal;
+    color: rgb(92, 92, 62);
+    margin:0;
+    padding:0;
+}
 @media (max-width: 600px) {
     h1 {
         font-size: 300%;
@@ -154,23 +167,24 @@ h1{
         width: 35%;
     }
 
-        .item {
+    .item {
         width: 20%;
         height: 70%;
         margin: 0 10px;
-        }
+    }
 
-        .bracks {
+    .bracks {
         font-size: 40px;
         margin: 0;
-        }
     }
+    
 
     #inner, .bracks {
         display: flex;
         align-items: center;
     }
 }
+
 
 
 
