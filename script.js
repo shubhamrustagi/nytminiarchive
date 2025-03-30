@@ -3,15 +3,17 @@ function extractDate() {
     const minDate = new Date('2014-08-21');
     const maxDate = new Date();
     const date = new Date(inputDate);
-    console.log(date);
+    const datetextElement = document.getElementById('dateText');
+    const linkerElement = document.getElementById('linker');
+    datetextElement.style.visibility = "visible";
     if (date < minDate) {
-        document.getElementById('dateText').innerHTML ="The date cannot be before 21 August 2014.";
-        document.getElementById('dateText').style.visibility = "visible";
+        datetextElement.innerHTML ="The date cannot be before 21 August 2014.";
+        
         return;
     }
     if (date > maxDate) {
-        document.getElementById('dateText').innerHTML = "The date cannot be in the future.";
-        document.getElementById('dateText').style.visibility = "visible";
+        datetextElement.innerHTML = "The date cannot be in the future.";
+        
         return;
     }
     if (inputDate) {
@@ -20,12 +22,13 @@ function extractDate() {
         const month = date.toLocaleString('default', { month: 'long' });
         const year = date.getFullYear();
         const linkWithDate = `https://www.nytimes.com/crosswords/game/mini/${dateParts[0]}/${dateParts[1]}/${dateParts[2]}`;
-        document.getElementById('linker').innerHTML = `<a target="_blank" href="${linkWithDate}">Open Here</a>`;
+        linkerElement.innerHTML = `<a target="_blank" href="${linkWithDate}">Open Here</a>`;
         
-        document.getElementById('dateText').innerHTML = `${day} ${month} ${year}`;
-        document.getElementById('dateText').style.visibility = "visible";
+        datetextElement.innerHTML = `${day} ${month} ${year}`;
+        
     } else {
-        document.getElementById('linker').innerHTML = "Please select a date."
+        datetextElement.innerHTML = "Please enter a date.";
+        
     }
 }
 
